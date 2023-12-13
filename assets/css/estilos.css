@@ -1,0 +1,27 @@
+.montserrat {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.raleway {
+  font-family: "Raleway", sans-serif !important;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif !important;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+#pokemon-image-container {
+  padding: 10px;
+}
+
+#pokemon-image {
+  max-width: 100%;
+  height: 250px;
+  display: block;
+  filter: brightness(0);
+  transition: opacity 0.5s ease;
+}
