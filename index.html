@@ -22,25 +22,57 @@
     />
     <link rel="stylesheet" href="assets/css/estilos.css" />
   </head>
-  <body>
+  <body class="bg-light">
     <header class="container-fluid bg-dark text-light py-4">
       <div class="container row mx-auto">
         <div class="col-md-4 my-auto">
           <img src="https://www.coderhouse.cl/imgs/ch.svg" alt="" />
         </div>
         <div class="col-md-8 d-flex justify-content-end">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="#ffffff"
+              d="M14 11.25c0-.966.784-1.75 1.75-1.75h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v1.5c0 .138.112.25.25.25h.5c.966 0 1.75.784 1.75 1.75v1.5A1.75 1.75 0 0 1 16.25 18h-1.5a.75.75 0 0 1 0-1.5h1.5a.25.25 0 0 0 .25-.25v-1.5a.25.25 0 0 0-.25-.25h-.5A1.75 1.75 0 0 1 14 12.75v-1.5Zm-1.25-1a.75.75 0 0 0-1.5 0v6a.25.25 0 0 1-.25.25H9.75a.75.75 0 0 0 0 1.5H11a1.75 1.75 0 0 0 1.75-1.75v-6ZM3 6.25v11.5A3.25 3.25 0 0 0 6.25 21h11.5A3.25 3.25 0 0 0 21 17.75V6.25A3.25 3.25 0 0 0 17.75 3H6.25A3.25 3.25 0 0 0 3 6.25ZM6.25 4.5h11.5c.966 0 1.75.784 1.75 1.75v11.5a1.75 1.75 0 0 1-1.75 1.75H6.25a1.75 1.75 0 0 1-1.75-1.75V6.25c0-.966.784-1.75 1.75-1.75Z"
+            />
+          </svg>
+          &nbsp;
           <h4 class="m-0">Curso Javascript</h4>
         </div>
       </div>
     </header>
 
-    <div class="container-fluid mt-5 py-5">
+    <div class="container-fluid py-5">
       <div class="container mx-auto" id="pokemon-container">
-        <h1 class="fw-bold text-center">¿Quién es ese Pokemon?</h1>
+        <h1 class="fw-bold text-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="35"
+            height="35"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="#ff0000"
+              d="M14.5 12a2.5 2.5 0 0 1-5 0a2.5 2.5 0 0 1 5 0zm7.5 0c0 5.52-4.48 10-10 10S2 17.52 2 12S6.48 2 12 2s10 4.48 10 10zm-2 0h-4c0-2.21-1.79-4-4-4s-4 1.79-4 4H4c0 4.41 3.59 8 8 8s8-3.59 8-8z"
+            />
+          </svg>
+          ¿Quién es ese Pokemon?
+        </h1>
 
-        <div class="row mt-5 pt-4">
+        <div
+          class="row mt-5 py-5 bg-image"
+          style="
+            background-image: url('assets/img/FONDO-POKEMON.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+          "
+        >
           <div
-            class="col-md-6 d-flex justify-content-center"
+            class="col-md-6 py-5 d-flex justify-content-center"
             id="pokemon-image-container"
           >
             <img
@@ -50,7 +82,7 @@
             />
           </div>
 
-          <div class="col-md-6 text-center">
+          <div class="col-md-6 py-5 text-center">
             <div id="options-container" class="btn-group-vertical btn-group-lg">
               <!-- Opciones de botones se agregarán aquí dinámicamente -->
             </div>
@@ -61,19 +93,32 @@
 
     <div class="container-fluid my-5">
       <div class="container mx-auto row">
-        <div class="col-md-10 d-flex align-items-center justify-content-center">
+        <div class="col-md-2 d-flex justify-content-start">
+          <button id="reset-button" class="btn btn-success m-0">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill="#ffffff"
+                fill-rule="evenodd"
+                d="M12.75 8a4.5 4.5 0 0 1-8.61 1.834l-1.391.565A6.001 6.001 0 0 0 14.25 8A6 6 0 0 0 3.5 4.334V2.5H2v4l.75.75h3.5v-1.5H4.352A4.5 4.5 0 0 1 12.75 8z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            Reiniciar Juego
+          </button>
+        </div>
+        <div class="col-md-10 d-flex align-items-center justify-content-start">
           <h2 class="text-center fw-bold align-middle m-0">
             Resultados del Juego
           </h2>
         </div>
-        <div class="col-md-2 d-flex justify-content-end">
-          <button id="reset-button" class="btn btn-success m-0">
-            Reiniciar Juego
-          </button>
-        </div>
         <div class="col-md-12">
           <table class="table table-bordered table-hover mt-4">
-            <thead>
+            <thead class="table-secondary">
               <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Nombre Pokémon</th>
@@ -89,11 +134,11 @@
       </div>
     </div>
 
-    <footer class="container-fluid bg-dark text-light py-5 mt-5">
+    <footer class="container-fluid bg-dark text-light py-4 mt-5">
       <div class="container mx-auto row">
         <div class="col-md-6 text-center my-auto">
-          <h3 class="fw-bold">CODERHOUSE - CURSO JAVASCRIPT</h3>
-          <h5>Entrega Final</h5>
+          <h3 class="fw-bold">Entrega Final</h3>
+          <h6>CODERHOUSE - CURSO JAVASCRIPT</h6>
         </div>
         <div class="col-md-6 text-center my-auto">
           <h4 class="fw-bold">RODRIGO BRAVO SOLIS</h4>

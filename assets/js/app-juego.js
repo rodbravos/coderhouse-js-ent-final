@@ -91,7 +91,7 @@ function loadPokemon() {
             optionsContainer.innerHTML = "";
             options.forEach((option) => {
               const button = document.createElement("button");
-              button.className = "btn btn-secondary py-3 px-5";
+              button.className = "btn btn-dark py-3 px-5";
               button.textContent = option;
               button.addEventListener("click", checkAnswer);
               optionsContainer.appendChild(button);
